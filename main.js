@@ -174,6 +174,10 @@ function monthlyReport(meterID) {
   });
 }
 
+fs.mkdirSync('./output/iith/Daily_Reports/images', { recursive: true });
+fs.mkdirSync('./output/iith/Monthly_Reports/images', { recursive: true });
+fs.mkdirSync('./output/iith/Weekly_Reports/images', { recursive: true });
+
 dailyReport(17);
 weeklyReport(17);
 monthlyReport(17);

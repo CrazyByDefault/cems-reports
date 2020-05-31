@@ -71,15 +71,12 @@ pdfGen.generateDaily = (data) =>  {
 
 
   // Finalize PDF file
-  fs.mkdir('./output/iith/Daily_Reports/', { recursive: true }, (err) => {
-    if (err) throw err;
-    doc.pipe(fs.createWriteStream(`./output/iith/Daily_Reports/iith_${dateStub}.pdf`))
-    .on('finish', function () {
-      console.log('PDF closed');
-    });
-
-    doc.end();
+  doc.pipe(fs.createWriteStream(`./output/iith/Daily_Reports/iith_${dateStub}.pdf`))
+  .on('finish', function () {
+    console.log('PDF closed');
   });
+
+  doc.end();
 };
 
 pdfGen.generateWeekly = (data) =>  {
@@ -141,15 +138,12 @@ pdfGen.generateWeekly = (data) =>  {
 
 
   // Finalize PDF file
-  fs.mkdir('./output/iith/Weekly_Reports/', { recursive: true }, (err) => {
-    if (err) throw err;
-    doc.pipe(fs.createWriteStream(`./output/iith/Weekly_Reports/iith_${dateStub}.pdf`))
-    .on('finish', function () {
-      console.log('PDF closed');
-    });
-
-    doc.end();
+  doc.pipe(fs.createWriteStream(`./output/iith/Weekly_Reports/iith_${dateStub}.pdf`))
+  .on('finish', function () {
+    console.log('PDF closed');
   });
+
+  doc.end();
 };
 
 pdfGen.generateMonthly = (data) =>  {
@@ -211,15 +205,12 @@ pdfGen.generateMonthly = (data) =>  {
 
 
   // Finalize PDF file
-  fs.mkdir('./output/iith/Monthly_Reports/', { recursive: true }, (err) => {
-    if (err) throw err;
-    doc.pipe(fs.createWriteStream(`./output/iith/Monthly_Reports/iith_${dateStub}.pdf`))
-    .on('finish', function () {
-      console.log('PDF closed');
-    });
-
-    doc.end();
+  doc.pipe(fs.createWriteStream(`./output/iith/Monthly_Reports/iith_${dateStub}.pdf`))
+  .on('finish', function () {
+    console.log('PDF closed');
   });
+
+  doc.end();
 };
 
 module.exports = pdfGen;
